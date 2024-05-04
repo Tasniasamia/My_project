@@ -1,0 +1,431 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1320px !important;
+  margin: auto;
+
+  @media screen and (max-width: 1320px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    padding: 0 10px;
+  }
+}
+.phoneNumber {
+  .PhoneInputInput {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+  }
+  // .PhoneInputInput:focus {
+  // border: none!important;
+
+  // }
+}
+body {
+  font-family: "Mulish";
+}
+// .logo {
+//   color: #f90000;
+//   font-family: "Nico Moji";
+//   font-size: 27px;
+//   font-style: normal;
+//   font-weight: 400;
+//   text-transform: uppercase;
+// }
+.table_checked{
+  .ant-checkbox-checked .ant-checkbox-inner {
+    width: 16px!important;
+    height: 16px!important;
+    background: #F8991F!important;
+  }
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fe4651 !important;
+}
+
+.ant-tabs-tab-active {
+  border: none !important;
+}
+
+.responsive_menu {
+  .link {
+    color: #2b2b2b !important;
+    background: none !important;
+  }
+
+  .link:hover {
+    color: #fe4651 !important;
+    background: none !important;
+  }
+}
+
+.input_coupon:focus {
+  outline: 0 !important;
+}
+
+
+
+.antbutton {
+  .ant-tabs-tab .ant-tabs-tab-active {
+    border: 0 !important;
+    outline: 0 !important;
+  }
+}
+
+.body {
+  font-family: "Mulish";
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+/* styles.css */
+
+/* Base styles */
+.title_content {
+  font-size: 68px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Mulish";
+  margin-bottom: 48px;
+  @apply lg:leading-[81.6px] md:leading-[60px] leading-[50px];
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .title_content {
+    font-size: 58px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title_content {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title_content {
+    font-size: 32px;
+  }
+}
+
+.header_1 {
+  @apply font-["Mulish"] lg:text-5xl md:text-[32px] text-[28px] font-bold;
+}
+
+.header_2 {
+  @apply xl:text-[28px] text-2xl font-["Mulish"] font-normal;
+  // font-family: "Mulish";
+  // font-size: 28px;
+  // font-style: normal;
+  // line-height: 50.4px;
+}
+
+.paragraph_1 {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 23px;
+}
+
+.paragraph_2 {
+  font-family: "Mulish";
+  font-size: 24px;
+  font-style: normal;
+  line-height: 32px;
+}
+
+.paragraph_3 {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 160%;
+}
+
+.paragraph_4 {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 160%;
+}
+
+.paragraph_5 {
+  font-family: "Mulish";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.paragraph_6 {
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 140%;
+}
+
+.ant-form-item-label label {
+  color: #555454 !important;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  width: 15px;
+  height: 15px;
+  background-color: #fff7f6;
+  border-color: #ebedf9 !important;
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner {
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-color: #ebedf9;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-color: red;
+}
+
+.gg input {
+  height: 55px !important;
+  width: 55px !important;
+  font-size: 40px !important;
+}
+
+.ant-switch {
+  background-color: #fe4651 !important;
+}
+.title {
+}
+
+
+select option:checked {
+  background-color: #3366cc;
+  color: #ffffff;
+}
+
+.modify:focus {
+  border: 0;
+  outline: 0;
+}
+
+#components-collapse-demo-collapsible .ant-space {
+  width: 100% !important;
+}
+
+.custom-shadow {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.custom-shadow2 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.custom_shadow3 {
+  box-shadow: 0 0 5% #000000;
+}
+.bg-rgba {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.no-rgba {
+  background: transparent;
+}
+
+.ant-switch {
+  background-color: #fe4651;
+}
+
+.contact {
+  .contact2 {
+    border-bottom: 1px solid white;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+  }
+
+  .ant-input-outlined:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+    background-color: black !important;
+    border-bottom: 1px solid white;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+  }
+
+  .ant-input-outlined:hover {
+    box-shadow: none !important;
+    outline: 0 !important;
+    background-color: black !important;
+    border-bottom: 1px solid white;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.example {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+
+
+
+
+
+.header_dark {
+  .ant-dropdown-menu .ant-dropdown-menu-title-content > a {
+    color: white !important;
+    transition: all 0.2s;
+    background: black;
+  }
+  .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu {
+    padding: 4px;
+    list-style-type: none;
+    background: black !important;
+    background-clip: padding-box;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-btn > span {
+  display: inline-block;
+  color: black !important;
+}
+
+.PhoneInput {
+  border: 1px solid #d9d9d9 !important;
+  padding: 15px 20px !important;
+  border-radius: 5px !important;
+}
+.PhoneInputInput:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.mobile-menu > .ant-menu {
+  background-color: black !important;
+  color: #fff !important;
+}
+.mobile-menu > .ant-menu-item-selected {
+  background-color: none !important;
+}
+.responsive-space {
+  grid-template-columns: repeat(1, 1fr); /* Two columns on smaller screens */
+}
+
+@media (min-width: 768px) {
+  .responsive-space {
+    grid-template-columns: repeat(1, 1fr); /* Three columns on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-space {
+    grid-template-columns: repeat(3, 1fr); /* Four columns on large screens */
+  }
+}
+
+/* Add more media queries as needed for different screen sizes */
+.image-editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+}
+
+.slider-container {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.slider-item {
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+/* Additional styles for progress bar or other indicators */
+.swipe_slide{
+ 
+  .swiper-pagination-bullet-active{
+   background-color:#F8991F!important;
+  }}
+  body{
+    font-family: "Plus Jakarta Sans";
+  }
+
+
+  .table2{
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  }
+
+  .shadow-custom {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07);
+  }
+  .shadow_custom2{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
+
+  }
+  .shadow_custom3{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
+
+  }
+  .shadow-custom4 {
+    box-shadow: 1px 0px 20px 0px rgb(243, 241, 241);
+  }
+  .custom_rounded{
+    border-radius:0px, 8px, 8px, 8px;
+  }
+.custom-rounded2 {
+  border-radius:10px;
+}
+.custom-rounds{
+  border-radius:0px, 16px, 0px, 16px;
+}
