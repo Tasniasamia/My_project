@@ -5,8 +5,8 @@ import { VscSend } from "react-icons/vsc";
 
 const page = () => {
   return (
-    <div className=" pt-[79px] pb-[100px] bg-[url('/banner.png')] bg-cover bg-no-repeat">
-      <div className="relative  ">
+    <div className=" pt-[86.99px] pb-[100px] bg-[url('/banner.png')] bg-cover bg-no-repeat">
+      <div className="container  ">
         <Image
           src="/man.png"
           width={1101}
@@ -14,14 +14,8 @@ const page = () => {
           alt="banner"
           className="absolute  right-0 lg:w-[55%] w-[50%] h-full"
         />
-        <div className=" flex flex-col  container sm:me-2 bg-red-300">
-          <div className="lg:w-[45%] w-[50%]   pt-[22px]  lg:pb-[100px] pb-[50px]  ">
-            <Image
-              src="/car_svg.png"
-              className="h-[257px] md:w-[477px] w-full absolute lg:left-[300px] mt-[64px] object-fill md:block hidden "
-              height={257}
-              width={477}
-            />
+        <div className=" bg-red-300 lg:w-[45%] w-[50%] ">
+           
             <div className="xl:text-[61px] sm:text-[28px] text-start text-[18px] text-white font-bold sm:mb-[32px] mb-[16px] capitalize">
               <h2>book your taxi from </h2>
               <h2 className=" text-[#1F8A70]"> anywhere today!</h2>
@@ -49,7 +43,6 @@ const page = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
