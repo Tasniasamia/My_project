@@ -429,3 +429,16 @@ select option:checked {
 .custom-rounds{
   border-radius:0px, 16px, 0px, 16px;
 }
+.img-shape{
+  clip-path: polygon(27% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.img-shape2{
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}
+@media screen and (max-width:568px){
+  .img-shape2{
+   clip-path: inset(0 0 0 0);;
+  
+  }
+}

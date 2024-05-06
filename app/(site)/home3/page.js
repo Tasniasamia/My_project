@@ -5,23 +5,24 @@ import { VscSend } from "react-icons/vsc";
 
 const page = () => {
   return (
-    <div className=" pt-[86.99px] pb-[100px] bg-[url('/banner.png')] bg-cover bg-no-repeat">
-      <div className="container  ">
+    <div className=" md:pt-[86.99px] pt-[40px] md:pb-[100px] pb-[50px] bg-[url('/bg.png')] bg-cover bg-no-repeat">
+      <div className=" h-[634px] relative ">
         <Image
-          src="/man.png"
+          src="/driver.png"
           width={1101}
           height={634}
           alt="banner"
-          className="absolute  right-0 lg:w-[55%] w-[50%] h-full"
+          className="absolute sm:block hidden right-0 w-[50%] h-full img-shape "
         />
-        <div className=" bg-red-300 lg:w-[45%] w-[50%] ">
-           
-            <div className="xl:text-[61px] sm:text-[28px] text-start text-[18px] text-white font-bold sm:mb-[32px] mb-[16px] capitalize">
+
+        <div className=" container  flex lg:flex-row flex-col  justify-center ">
+          <div className="sm:w-[50%] w-full    h-full">
+            <div className="xl:text-[61px] text-[30px] text-white font-bold sm:mb-[32px] mb-[16px] capitalize">
               <h2>book your taxi from </h2>
               <h2 className=" text-[#1F8A70]"> anywhere today!</h2>
             </div>
 
-            <p className="text-white font-normal  w-full sm:mb-[40px] mb-[20px] sm:text-[16px] text-[10px]  sm:block hidden">
+            <p className="text-white font-normal  w-full sm:mb-[40px] mb-[20px] sm:text-[16px] text-[10px] ">
               A taxi is a motor vehicle designed primarily for the
               transportation of passengers for a fare. It is often characterized
               by its distinctive exterior markings,
@@ -41,8 +42,26 @@ const page = () => {
               Book Ride
             </button>
           </div>
+          <div className="flex lg:h-[634px] md:h-[280px] sm:h-[260px] flex-col sm:justify-end justify-start ">
+          <div className="grid  grid-cols-3 gap-x-3 justify-items-center lg:justify-items-start    lg:z-40  lg:mb-[-37px] sm:gap-y-0 mt-4 gap-y-4">
+            <div className="sm:w-[209px] w-full  sm:h-[74px] bg-[#1F8A70] text-white text-center flex flex-col items-center img-shape2">
+              <h3 className="font-medium text-[24px]">8k+</h3>
+              <h6 className="font-normal text-[#DEDEDE]">App Downloads</h6>
+            </div>
+            <div className="sm:w-[209px] w-full  sm:h-[74px] bg-[#1F8A70] text-white text-center flex flex-col items-center img-shape2">
+              <h3 className="font-medium text-[24px]">8k+</h3>
+              <h6 className="font-normal text-[#DEDEDE]">Active Rider</h6>
+            </div>
+            <div className="sm:w-[209px] w-full  sm:h-[74px] bg-[#1F8A70] text-white text-center flex flex-col items-center img-shape2">
+              <h3 className="font-medium text-[24px]">8k+</h3>
+              <h6 className="font-normal text-[#DEDEDE]">Active User</h6>
+            </div>
+          </div>
+          </div>
+        
         </div>
       </div>
+    </div>
   );
 };
 
