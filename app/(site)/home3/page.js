@@ -5,16 +5,21 @@ import { VscSend } from "react-icons/vsc";
 
 const page = () => {
   return (
-    <div className=" md:pt-[86.99px] pt-[40px] md:pb-[100px] pb-[50px] bg-[url('/bg.png')] bg-cover bg-no-repeat">
+    <div className=" md:pt-[86.99px] pt-[40px] md:pb-[100px] pb-[50px] bg-[url('/bg.png')] bg-cover bg-no-repeat relative">
+      <img
+          src="/car_svg.png"
+          className="w-[293px] h-[198px] absolute left-[90px] bottom-[190px]"
+          alt="svg image"
+        />
       <div className=" h-[634px] relative ">
-        <Image
+         <Image
           src="/driver.png"
           width={1101}
           height={634}
           alt="banner"
           className="absolute sm:block hidden right-0 w-[50%] h-full img-shape "
         />
-          <div className=" container  lg:items-center  flex lg:flex-row flex-col  justify-center ">
+        <div className=" container  lg:items-center  flex lg:flex-row flex-col  justify-center ">
           <div className=" sm:w-[50%] w-full h-full">
             <div className="xl:text-[61px] text-[30px] text-white font-bold sm:mb-[32px] mb-[16px] capitalize">
               <h2>book your taxi from </h2>
@@ -63,4 +68,3 @@ const page = () => {
 };
 
 export default page;
-
