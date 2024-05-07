@@ -442,3 +442,21 @@ select option:checked {
   
   }
 }
+
+// .chart-container{
+// .recharts-wrapper{
+//   height: 800px;
+//   width:400px;
+// }
+// }
+
+
+.chart-container {
+  .recharts-wrapper svg {
+    width: 200px !important;
+  }
+  .recharts-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}

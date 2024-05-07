@@ -5,21 +5,27 @@ import { VscSend } from "react-icons/vsc";
 
 const page = () => {
   return (
-    <div className=" md:pt-[86.99px] pt-[40px] md:pb-[100px] pb-[50px] bg-[url('/bg.png')] bg-cover bg-no-repeat relative">
-      <img
-          src="/car_svg.png"
-          className="w-[293px] h-[198px] absolute left-[90px] bottom-[190px]"
-          alt="svg image"
-        />
-      <div className=" h-[634px] relative ">
-         <Image
+    <div className=" md:pt-[86.99px] pt-[40px] md:pb-[100px] pb-[50px] bg-[url('/bg.png')] bg-cover bg-no-repeat">
+      <div className=" h-[581px] relative  ">
+        <div className="w-[50%]">
+        <Image
           src="/driver.png"
           width={1101}
           height={634}
           alt="banner"
-          className="absolute sm:block hidden right-0 w-[50%] h-full img-shape "
+          className="absolute sm:block hidden  z-40 right-0  h-full img-shape "
         />
-        <div className=" container  lg:items-center  flex lg:flex-row flex-col  justify-center ">
+         <Image
+          src="/frame.png"
+          width={1101}
+          height={634}
+          alt="banner"
+          className="absolute sm:block hidden z-30   right-[53px] top-[-53px] h-[634px] img-shape "
+        />
+        </div>
+      
+
+          {/* <div className=" container  lg:items-center  flex lg:flex-row flex-col  justify-center ">
           <div className=" sm:w-[50%] w-full h-full">
             <div className="xl:text-[61px] text-[30px] text-white font-bold sm:mb-[32px] mb-[16px] capitalize">
               <h2>book your taxi from </h2>
@@ -46,7 +52,7 @@ const page = () => {
             </button>
           </div>
           <div className="flex lg:h-[634px] md:h-[280px] sm:h-[260px] flex-col sm:justify-end justify-start xl:w-auto w-full ">
-            <div className="grid  grid-cols-3 sm:gap-x-0 gap-x-3 justify-items-center   w-full  lg:z-40  lg:mb-[-37px] sm:gap-y-0 mt-4 gap-y-4">
+            <div className="grid  grid-cols-3 sm:gap-x-0 gap-x-3 justify-items-center   w-full  lg:z-50  lg:mb-[-37px] sm:gap-y-0 mt-4 gap-y-4">
               <div className="sm:w-[209px] w-full  sm:h-[74px] bg-[#1F8A70] text-white text-center flex flex-col items-center img-shape2">
                 <h3 className="font-medium text-[24px]">8k+</h3>
                 <h6 className="font-normal text-[#DEDEDE]">App Downloads</h6>
@@ -61,10 +67,11 @@ const page = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
 export default page;
+
