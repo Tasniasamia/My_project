@@ -36,11 +36,11 @@ body {
 //   font-weight: 400;
 //   text-transform: uppercase;
 // }
-.table_checked{
+.table_checked {
   .ant-checkbox-checked .ant-checkbox-inner {
-    width: 16px!important;
-    height: 16px!important;
-    background: #F8991F!important;
+    width: 16px !important;
+    height: 16px !important;
+    background: #f8991f !important;
   }
 }
 
@@ -71,8 +71,6 @@ a:hover {
 .input_coupon:focus {
   outline: 0 !important;
 }
-
-
 
 .antbutton {
   .ant-tabs-tab .ant-tabs-tab-active {
@@ -214,7 +212,6 @@ p {
 .title {
 }
 
-
 select option:checked {
   background-color: #3366cc;
   color: #ffffff;
@@ -296,11 +293,6 @@ select option:checked {
   border-radius: 4px;
 }
 
-
-
-
-
-
 .header_dark {
   .ant-dropdown-menu .ant-dropdown-menu-title-content > a {
     color: white !important;
@@ -314,8 +306,10 @@ select option:checked {
     background-clip: padding-box;
     border-radius: 8px;
     outline: none;
-    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-      0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    box-shadow:
+      0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 9px 28px 8px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -389,57 +383,54 @@ select option:checked {
 }
 
 /* Additional styles for progress bar or other indicators */
-.swipe_slide{
- 
-  .swiper-pagination-bullet-active{
-   background-color:#F8991F!important;
-  }}
-  body{
-    font-family: "Plus Jakarta Sans";
+.swipe_slide {
+  .swiper-pagination-bullet-active {
+    background-color: #f8991f !important;
   }
+}
+body {
+  font-family: "Plus Jakarta Sans";
+}
 
+.table2 {
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+}
 
-  .table2{
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-  }
-
-  .shadow-custom {
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07);
-  }
-  .shadow_custom2{
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
-
-  }
-  .shadow_custom3{
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
-
-  }
-  .shadow-custom4 {
-    box-shadow: 1px 0px 20px 0px rgb(243, 241, 241);
-  }
-  .custom_rounded{
-    border-radius:0px, 8px, 8px, 8px;
-  }
+.shadow-custom {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07);
+}
+.shadow_custom2 {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
+}
+.shadow_custom3 {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
+}
+.shadow-custom4 {
+  box-shadow: 1px 0px 20px 0px rgb(243, 241, 241);
+}
+.custom_rounded {
+  border-radius: 0px, 8px, 8px, 8px;
+}
 .custom-rounded2 {
-  border-radius:10px;
+  border-radius: 10px;
 }
-.custom-rounds{
-  border-radius:0px, 16px, 0px, 16px;
+.custom-rounds {
+  border-radius: 0px, 16px, 0px, 16px;
 }
-.img-shape{
+.img-shape {
   clip-path: polygon(27% 0, 100% 0, 100% 100%, 0% 100%);
 }
-.img-shape2{
+.img-shape2 {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-
 }
-@media screen and (max-width:568px){
-  .img-shape2{
-   clip-path: inset(0 0 0 0);;
-  
+@media screen and (max-width: 568px) {
+  .img-shape2 {
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -450,7 +441,6 @@ select option:checked {
 // }
 // }
 
-
 .chart-container {
   .recharts-wrapper svg {
     width: 200px !important;
@@ -459,4 +449,8 @@ select option:checked {
     width: 200px !important;
     height: 200px !important;
   }
+}
+
+.ant-modal-content > .ant-modal-footer {
+  display: none !important;
 }
