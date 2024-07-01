@@ -1,4 +1,6 @@
 "use client";
+import CountrySelector from "@/app/components/common/countryselector";
+
 const page = () => {
     return (
         <div className="container">
@@ -34,6 +36,7 @@ const page = () => {
             </div>
             </div>
             </div>
+            <CountrySelector/>
            </div>
     );
 };
