@@ -1,10 +1,11 @@
 import Hero from '@/app/components/turkey/hero';
-import React from 'react';
+import Plan from '@/app/components/turkey/plan';
 
 const page = () => {
     return (
         <div>
             <Hero/>
+            <Plan/>
         </div>
     );
 };

@@ -1,5 +1,3 @@
-"use client";
-
 import { Rate } from "antd";
 
 const Hero = () => {
