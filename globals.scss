@@ -687,3 +687,43 @@ body {
   transition: background-position 275ms ease;
 
 }
+
+
+.header-5{
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 120% */
+letter-spacing: 2px;
+text-transform: capitalize;
+}
+.header-1{
+font-family: Cormorant;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 124%; /* 79.36px */
+letter-spacing: 2.56px;
+text-transform: capitalize;
+}
+.header-6{
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 27.2px */
+text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+  .header-1{
+    font-family: Cormorant;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 124%; /* 79.36px */
+    letter-spacing: 2.56px;
+    text-transform: capitalize;
+    }
+}
