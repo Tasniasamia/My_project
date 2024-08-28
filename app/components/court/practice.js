@@ -13,7 +13,7 @@ const Practice = () => {
         <h2 className="text-[#0C0C15] mt-[24px] about-title mt-[24px]">
           our practice Area
         </h2>
-        <p className="mt-[40px] mb-[56px] text-[#5B5353] font-normal uppercase font-['Lato'] text-base line-height-[170%]">
+        <p className="mt-[40px] lg:w-[536px] w-full mb-[56px] text-[#5B5353] font-normal uppercase font-['Lato'] text-base line-height-[170%]">
           Our legal services are designed to protect your rights and deliver
           results. With expertise across a range of practice areas, we provide
           personalized, professional support for every case.
