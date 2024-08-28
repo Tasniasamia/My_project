@@ -1,5 +1,7 @@
 "use client";
 import About from "@/app/components/court/about";
+import Blog from "@/app/components/court/blog";
+import Booking from "@/app/components/court/booking";
 import Client from "@/app/components/court/client";
 import Counter from "@/app/components/court/counter";
 import Hero from "@/app/components/court/hero";
@@ -19,6 +21,8 @@ const page = () => {
             <Justice/>
             <Project/>
             <Client/>
+            <Blog/>
+            <Booking/>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import Image from "next/image";
 const Client = () => {
   return (
     <div className="bg-[#EFF5F5] py-[60px]">
-      <div className="container flex lg:flex-row flex-col justify-between ">
+      <div className="container flex lg:flex-row flex-col justify-between lg:gap-0 gap-[60px] lg:items-center">
         <div className="lg:basis-1/2 basis-full h-[552px] relative  ">
           <Image
             src="/court/client.png"
