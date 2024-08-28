@@ -24,6 +24,7 @@ const Justice = () => {
       <Swiper
         slidesPerGroupSkip={2}
         freeMode={true}
+        centeredSlides={true}
         breakpoints={{
           640: {
             slidesPerView: 1,
