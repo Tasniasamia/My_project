@@ -45,10 +45,10 @@ const Client = () => {
             personalized, professional support for every case.
           </p>
           <div className="flex gap-[10px] mt-[50px] items-center">
-          <button className="cursor-pointer header-6 hover:bg-transparent duration-300 transition-all border border-[#B68C5A]   text-white md:px-[32px] px-[16px] py-[16px] bg-[#B68C5A] rounded-[4px]">
+          <button className="cursor-pointer hover:text-[#B68C5A] header-6 hover:bg-transparent duration-300 transition-all border border-[#B68C5A]   text-white md:px-[32px] px-[16px] py-[16px] bg-[#B68C5A] rounded-[4px]">
             Get Appoinment
           </button>
-          <button className="cursor-pointer text-[16px] font-medium text-white md:px-[32px] px-[16px] py-[16px] border  hover:bg-[#B68C5A] duration-300 transition-all hover:border-[#B68C5A] rounded-[4px]">
+          <button className="cursor-pointer text-[16px] font-medium text-[#B68C5A]  hover:text-white md:px-[32px] px-[16px] py-[16px] border  hover:bg-[#B68C5A] duration-300 transition-all border-[#B68C5A] rounded-[4px]">
             Learn More
           </button>
         </div>
