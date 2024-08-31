@@ -1,101 +1,93 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+"use client";
 
-function ClientSlider() {
-  const navSettings = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    focusOnSelect: true,
-    asNavFor: ".slider-for",
-  };
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import { Autoplay, Navigation, FreeMode, EffectCoverflow } from "swiper/modules";
+import { useState, useRef } from "react";
 
-  const forSettings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    asNavFor: ".slider-nav",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+const ClientSlider = () => {
+  const [active, setActive] = useState(0);
+  const slideRef = useRef(null);
 
-  function SampleNextArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <div className={`${className} text-gray-800`} onClick={onClick}>
-        <i className="fa fa-angle-right"></i>
-      </div>
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <div className={`${className} text-gray-800`} onClick={onClick}>
-        <i className="fa fa-angle-left"></i>
-      </div>
-    );
-  }
+  const clients = [
+    { id: 1, name: "Sania Graic", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." },
+    { id: 2, name: "Sania Graic1", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." },
+    { id: 3, name: "Sania Graic2", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." },
+    { id: 4, name: "Sania Graic3", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." },
+    { id: 5, name: "Sania Graic4", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." },
+    { id: 6, name: "Sania Graic5", description: "Meet our dedicated legal team, committed to providing expert advice and achieving the best outcomes for our clients." }
+  ];
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="flex flex-col items-center">
-        <div className="w-full md:w-3/4 lg:w-2/5 mb-4">
-          <Slider {...navSettings} className="slider-nav">
-            <div className="client-thumbnail">
-              <img src="assets/img/client1.png" alt="Client 1" className="img-fluid w-full" />
-            </div>
-            <div className="client-thumbnail">
-              <img src="assets/img/client2.png" alt="Client 2" className="img-fluid w-full" />
-            </div>
-            <div className="client-thumbnail">
-              <img src="assets/img/client3.png" alt="Client 3" className="img-fluid w-full" />
-            </div>
-            <div className="client-thumbnail">
-              <img src="assets/img/client2.png" alt="Client 4" className="img-fluid w-full" />
-            </div>
-            <div className="client-thumbnail">
-              <img src="assets/img/client1.png" alt="Client 5" className="img-fluid w-full" />
-            </div>
-          </Slider>
-        </div>
-        <div className="w-full md:w-4/5 lg:w-3/5">
-          <Slider {...forSettings} className="slider-for">
-            <div className="client-feedback-text text-center">
-              <div className="client-name text-center">
-                <h5>EvA Doe</h5>
-                <h6>Beautiful, Welcoming Yoga Studio!</h6>
-              </div>
-              <div className="testimonials-content">
-                <p>Duis fermentum leo velit, nec lobortis elit rutrum vitae...</p>
-              </div>
-            </div>
-            <div className="client-feedback-text text-center">
-              <div className="client-name text-center">
-                <h5>Martharajas</h5>
-                <h6>Beautiful, Welcoming Yoga Studio!</h6>
-              </div>
-              <div className="testimonials-content">
-                <p>Fusce laoreet augue sit amet metus vulputate interdum...</p>
-              </div>
-            </div>
-            <div className="client-feedback-text text-center">
-              <div className="client-name text-center">
-                <h5>KATI SATOUN</h5>
-                <h6>Beautiful, Welcoming Yoga Studio!</h6>
-              </div>
-              <div className="testimonials-content">
-                <p>Duis fermentum leo velit, nec lobortis elit rutrum vitae...</p>
-              </div>
-            </div>
-          </Slider>
+    <div className="mb-[150px] container">
+      <div className="text-center">
+        <h4 className="header-4-bold text-[#B68C5A]">our mission</h4>
+        <h2 className="text-[#0C0C15] mt-[24px] about-title">
+          our promise to you!
+        </h2>
+
+        <div className="flex justify-center mt-[40px] mb-[56px]">
+          <p className="lg:w-[535px] w-full text-[#5B5353] font-normal uppercase font-['Lato'] text-base leading-[170%]">
+            Meet our dedicated legal team, committed to providing expert advice
+            and achieving the best outcomes for our clients.
+          </p>
         </div>
       </div>
+      <Swiper
+        slidesPerView={3}
+        centeredSlides={true}
+        loop={true}
+        spaceBetween={-120} // Adjusted to a moderate negative value
+        className="flex justify-center items-center"
+        onSlideChange={(swiper) => setActive(swiper.realIndex)}
+        modules={[Navigation, Autoplay, FreeMode, EffectCoverflow]}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1.5,
+          slideShadows: false,
+        }}
+        ref={slideRef}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        {clients.map((client, index) => {
+          // Determine the justification based on the slide's position relative to the active slide
+          let justifyClass = "justify-center";
+          if (index === active - 1 || (active === 0 && index === clients.length - 1)) {
+            justifyClass = "justify-end";
+          } else if (index === active + 1 || (active === clients.length - 1 && index === 0)) {
+            justifyClass = "justify-start";
+          }
+
+          return (
+            <SwiperSlide key={client.id}>
+              <div className={`flex items-center transition-opacity duration-500 ease-in-out ${justifyClass} ${active === index ? "opacity-100" : "opacity-50"}`}>
+                <Image
+                  src="/court/lawer.png"
+                  alt="justice"
+                  width={100}
+                  height={100}
+                  className="h-[50px] w-[50px] object-fill rounded-full"
+                />
+              </div>
+              <div className={`w-full transition-opacity duration-500 ease-in-out ${active === index ? "opacity-100" : "opacity-0"}`}>
+                <h1 className="text-center mb-2">{client.name}</h1>
+                <p className="text-center">{client.description}</p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
-}
+};
 
 export default ClientSlider;
