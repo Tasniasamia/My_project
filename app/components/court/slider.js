@@ -55,7 +55,7 @@ const ClientSlider = () => {
         pagination={{ clickable: true }}
         autoplay={{
           delay: 2500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
       >
         {clients.map((client, index) => {
