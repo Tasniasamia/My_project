@@ -9,6 +9,7 @@ import Justice from "@/app/components/court/justice";
 import Mission from "@/app/components/court/mission";
 import Practice from "@/app/components/court/practice";
 import Project from "@/app/components/court/project";
+import Schedule from "@/app/components/court/schedule";
 import ClientSlider from "@/app/components/court/slider";
 
 const page = () => {
@@ -25,6 +26,7 @@ const page = () => {
             <Blog/>
             <Booking/>
             <ClientSlider/>
+            <Schedule/>
         </div>
     );
 };
