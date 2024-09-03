@@ -872,11 +872,14 @@ text-transform: capitalize;
 // }
 
 
+// For Client Slider
+// .slick-current {
+//   opacity: 1 !important;
+// }
 
-.slick-current {
-  opacity: 1 !important;
-}
+// .slick-slide.slick-active:not(.slick-current) {
+//   opacity: 0.5 !important; /* Adjust the value as needed */
+// }
 
-.slick-slide.slick-active:not(.slick-current) {
-  opacity: 0.5 !important; /* Adjust the value as needed */
-}
+/* General rule for all active slides */
+/* General rule for all active slides */

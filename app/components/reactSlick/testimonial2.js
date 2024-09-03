@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function ClientSlider() {
+function Testimonial2() {
   const clients = [
     {
       id: 1,
@@ -38,9 +38,6 @@ function ClientSlider() {
     focusOnSelect: true,
     arrows: false,
     initialSlide: 0,
-    afterChange: () => {
-      adjustSlideStyles();
-    },
     responsive: [
       {
         breakpoint: 1024,
@@ -55,41 +52,28 @@ function ClientSlider() {
         },
       },
     ],
+    afterChange: () => handleSlideChange(), // Call handleSlideChange after every slide change
   };
 
-  const adjustSlideStyles = () => {
-    // Reset all slide styles
-    document.querySelectorAll('.slick-slide').forEach(slide => {
-      const img = slide.querySelector('img');
-      const textDiv = slide.querySelector('div > div > div > div ');
-
-      if (img) {
-        img.style.opacity = '1'; // Reset image opacity
-      }
-      if (textDiv) {
-        textDiv.style.opacity = '1'; // Reset text opacity
-      }
-    });
-
-    // Adjust styles for active but not current slides
-    const activeSlides = document.querySelectorAll('.slick-slide.slick-active:not(.slick-current)');
-    activeSlides.forEach(slide => {
-      // const img = slide.querySelector('img');
-      const textDiv = slide.querySelector('div > div > div > div ');
-      const img = slide.querySelector('div > div > div > div > img ');
-
-
-      if (img) {
-        img.style.opacity = '0.5'; // Set image opacity to 0.5
-      }
-      if (textDiv) {
-        textDiv.style.opacity = '0.5'; // Hide text by setting opacity to 0
+  const handleSlideChange = () => {
+    // Get all elements with the slick-active class
+    const activeSlides = document.querySelectorAll('.slick-active');
+    
+    // Loop through each active slide
+    activeSlides.forEach((slide, index) => {
+      if (index === 1) {
+        // Set opacity to 1 for the second active slide
+        slide.style.opacity = '1';
+      } else {
+        // Set opacity to 0.5 for other slides
+        slide.style.opacity = '0.5';
       }
     });
   };
 
   useEffect(() => {
-    adjustSlideStyles(); // Adjust styles on initial render
+    // Run the function on mount and after every render
+    handleSlideChange();
   }, []);
 
   return (
@@ -99,14 +83,16 @@ function ClientSlider() {
           <Slider {...settingsNav}>
             {clients.map((client, index) => (
               <div key={index}>
-                <div className="flex-col justify-center items-center w-full !h-[113px] transition-opacity duration-300">
+                <div
+                  className={`flex-col justify-center items-center w-full !h-[113px] transition-opacity duration-300`}
+                >
                   <img
                     src={client.image}
                     alt={client.alt}
                     className="w-[88px] h-[88px] object-fill rounded-full"
                   />
                   <div>
-                    {client.description}
+                    {client?.description}
                   </div>
                 </div>
               </div>
@@ -118,4 +104,4 @@ function ClientSlider() {
   );
 }
 
-export default ClientSlider;
+export default Testimonial2;
