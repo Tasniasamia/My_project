@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,7 +31,7 @@ function Testimonial2() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt voluptates, asperiores, voluptatem a consequatur doloremque, voluptatibus vero magni ducimus natus animi expedita! Est consequuntur ab atque repellendus doloribus cumque",
     },
   ];
-
+  const contentRef = useRef();
   const settingsNav = {
     slidesToShow: 3,
     swipeToSlide: true,
@@ -57,16 +57,27 @@ function Testimonial2() {
 
   const handleSlideChange = () => {
     // Get all elements with the slick-active class
-    const activeSlides = document.querySelectorAll('.slick-active');
-    
+    const activeSlides = document.querySelectorAll(".slick-active");
+
     // Loop through each active slide
     activeSlides.forEach((slide, index) => {
+      const image = slide.querySelector("img");
+      const content = slide.querySelector(".description"); // Updated selector
+      
       if (index === 1) {
-        // Set opacity to 1 for the second active slide
-        slide.style.opacity = '1';
+        // Set opacity to 1 for the image in the second active slide
+        image.style.opacity = "1";
+        // Set content opacity to 1 for the second active slide
+        if (content) {
+          content.style.opacity = "1";
+        }
       } else {
-        // Set opacity to 0.5 for other slides
-        slide.style.opacity = '0.5';
+        // Set image opacity to 0.5 for other slides
+        image.style.opacity = "0.5";
+        // Hide the content for other slides
+        if (content) {
+          content.style.opacity = "0";
+        }
       }
     });
   };
@@ -77,23 +88,23 @@ function Testimonial2() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container ">
       <div className="my-[150px]">
-        <div className="md:w-[576px] w-full mx-auto">
+        <div className="md:px-[400px] w-full mx-auto !relative z-10  ">
           <Slider {...settingsNav}>
             {clients.map((client, index) => (
-              <div key={index}>
+              <div key={index} ref={contentRef}>
                 <div
-                  className={`flex-col justify-center items-center w-full !h-[113px] transition-opacity duration-300`}
+                  className={`flex-col justify-center items-center w-full transition-opacity duration-300 h-[200px]`}
                 >
                   <img
                     src={client.image}
-                    alt={client.alt}
+                    alt={client.id}
                     className="w-[88px] h-[88px] object-fill rounded-full"
                   />
-                  <div>
-                    {client?.description}
-                  </div>
+                </div>
+                <div className="text-center w-full description absolute left-0 bottom-0 z-40 ">
+                  {client.description}
                 </div>
               </div>
             ))}
